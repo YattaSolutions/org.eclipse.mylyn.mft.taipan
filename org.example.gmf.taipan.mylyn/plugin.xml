@@ -23,4 +23,10 @@
          </Priority>
       </decoratorProvider>
    </extension>
+   <extension
+      point="org.eclipse.mylyn.context.ui.startup">
+      <startup
+         class="org.example.gmf.taipan.mylyn.Activator$EcoreDiagramBridgeStartup">
+      </startup>
+   </extension>
 </plugin>
