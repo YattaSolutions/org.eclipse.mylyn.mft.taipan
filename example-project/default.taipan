@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taipan:Aquatory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:taipan="http://www.eclipse.org/examples/gmf/taipan">
+  <ports location="East"/>
+  <ports location="South"/>
+  <ports location="West"/>
+  <ports location="Nord"/>
+  <routes source="//@ports.2" destination="//@ports.1" description="df" reliability="0.8"/>
+  <routes source="//@ports.2" destination="//@ports.3" reliability="0.2"/>
+  <ships xsi:type="taipan:Warship" name="Battleship">
+    <escortOrder ships="//@ships.1"/>
+  </ships>
+  <ships name="Cargo Ship">
+    <cargo xsi:type="taipan:LargeItem" article="Gold" weight="5.0"/>
+    <cargo xsi:type="taipan:LargeItem" article="Silver" weight="2.0"/>
+  </ships>
+  <ships xsi:type="taipan:Warship" name="Pirates"/>
+</taipan:Aquatory>
