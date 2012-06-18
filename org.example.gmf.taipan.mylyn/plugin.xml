@@ -14,4 +14,13 @@
             contentType="org.example.gmf.taipan.mylyn.uiBridge1">
       </uiBridge>
    </extension>
+   <extension
+         point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders">
+      <decoratorProvider
+            class="org.example.gmf.taipan.mylyn.TaipanDecoratorProvider">
+         <Priority
+               name="Lowest">
+         </Priority>
+      </decoratorProvider>
+   </extension>
 </plugin>
