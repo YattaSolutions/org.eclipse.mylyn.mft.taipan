@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: MFT Bridge for GMF taipan example
-Bundle-SymbolicName: org.example.gmf.taipan.mylyn
+Bundle-SymbolicName: org.example.gmf.taipan.mylyn;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.example.gmf.taipan.mylyn.Activator
 Require-Bundle: org.eclipse.ui,
