@@ -29,4 +29,13 @@
          class="org.example.gmf.taipan.mylyn.Activator$EcoreDiagramBridgeStartup">
       </startup>
    </extension>
+   <extension
+         point="org.eclipse.ui.actionSetPartAssociations">
+      <actionSetPartAssociation
+            targetID="org.eclipse.mylyn.modeling.actionSet">
+         <part
+               id="org.eclipse.gmf.examples.taipan.gmf.editor.part.TaiPanDiagramEditorID">
+         </part>
+      </actionSetPartAssociation>
+   </extension>
 </plugin>
