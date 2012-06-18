@@ -17,6 +17,20 @@ import org.eclipse.ui.IWorkbenchPart;
  * @author <a href="mailto:bork@yatta.de">Manuel Bork</a>
  */
 public class TaipanContextUiBridge extends DiagramUiBridge {
+
+	private static TaipanContextUiBridge instance;
+
+	public TaipanContextUiBridge() {
+		instance = this;
+	}
+
+	public static TaipanContextUiBridge getInstance() {
+		if (instance == null) {
+			new TaipanContextUiBridge();
+		}
+		return instance;
+	}
+
 	@Override
 	public boolean acceptsPart(IWorkbenchPart part) {
 		// is this WorkbenchPart supported?

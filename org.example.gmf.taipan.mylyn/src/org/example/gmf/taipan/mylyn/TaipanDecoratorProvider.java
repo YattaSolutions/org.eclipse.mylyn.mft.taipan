@@ -12,7 +12,6 @@ public class TaipanDecoratorProvider extends ContextDecoratorProvider {
 
 	@Override
 	public DiagramUiBridge getDomainUIBridge() {
-		// TODO Auto-generated method stub
-		return null;
+		return TaipanContextUiBridge.getInstance();
 	}
 }
