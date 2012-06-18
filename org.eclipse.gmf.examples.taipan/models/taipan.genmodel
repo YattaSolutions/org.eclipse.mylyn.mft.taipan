@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.gmf.examples.taipan/src"
+    editorDirectory="/org.eclipse.gmf.examples.taipan.editor/src" modelPluginID="org.eclipse.gmf.examples.taipan"
+    modelName="TaiPan" nonNLSMarkers="true" codeFormatting="true" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0">
+  <foreignModel>taipan.ecore</foreignModel>
+  <genPackages prefix="TaiPan" basePackage="org.eclipse.gmf.examples" disposableProviderFactory="true"
+      ecorePackage="taipan.ecore#/">
+    <genClasses ecoreClass="taipan.ecore#//Aquatory">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference taipan.ecore#//Aquatory/ports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference taipan.ecore#//Aquatory/routes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference taipan.ecore#//Aquatory/ships"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="taipan.ecore#//Destination"/>
+    <genClasses ecoreClass="taipan.ecore#//Port">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute taipan.ecore#//Port/location"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference taipan.ecore#//Port/buildings"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference taipan.ecore#//Port/register"/>
+    </genClasses>
+    <genClasses ecoreClass="taipan.ecore#//Building">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute taipan.ecore#//Building/info"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute taipan.ecore#//Building/street"/>
+    </genClasses>
+    <genClasses ecoreClass="taipan.ecore#//Route">
+      <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference taipan.ecore#//Route/source"/>
+      <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference taipan.ecore#//Route/destination"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute taipan.ecore#//Route/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute taipan.ecore#//Route/reliability"/>
+    </genClasses>
+    <genClasses ecoreClass="taipan.ecore#//Ship">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute taipan.ecore#//Ship/name"/>
+      <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference taipan.ecore#//Ship/destination"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference taipan.ecore#//Ship/route"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference taipan.ecore#//Ship/cargo"/>
+    </genClasses>
+    <genClasses ecoreClass="taipan.ecore#//Item">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute taipan.ecore#//Item/article"/>
+    </genClasses>
+    <genClasses ecoreClass="taipan.ecore#//LargeItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute taipan.ecore#//LargeItem/weight"/>
+    </genClasses>
+    <genClasses ecoreClass="taipan.ecore#//SmallItems">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute taipan.ecore#//SmallItems/quantity"/>
+    </genClasses>
+    <genClasses ecoreClass="taipan.ecore#//EmptyBox"/>
+    <genClasses ecoreClass="taipan.ecore#//Warship">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference taipan.ecore#//Warship/escortOrder"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference taipan.ecore#//Warship/attackOrders"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="taipan.ecore#//Order"/>
+    <genClasses ecoreClass="taipan.ecore#//EscortShipsOrder">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference taipan.ecore#//EscortShipsOrder/ships"/>
+    </genClasses>
+    <genClasses ecoreClass="taipan.ecore#//BesiegePortOrder">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference taipan.ecore#//BesiegePortOrder/port"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

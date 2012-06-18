@@ -1,0 +1,68 @@
+@namespace(uri="http://www.eclipse.org/examples/gmf/taipan", prefix="taipan")
+package taipan;
+
+class Aquatory {
+  val Port[*] ports;
+  val Route[*] routes;
+  val Ship[*] ships;
+}
+
+abstract interface Destination {
+}
+
+class Port extends Destination {
+  attr String location;
+  val Building[*] buildings;
+  ref Ship[*] register;
+}
+
+class Building {
+  attr String info;
+  attr String street;
+}
+
+class Route extends Destination {
+  ref Destination[1] source;
+  ref Destination[1] destination;
+  attr String description;
+  attr double reliability = "1";
+}
+
+class Ship {
+  attr String name;
+  ref Port destination;
+  ref Route route;
+  val Item[*] cargo;
+}
+
+abstract class Item {
+  attr String article;
+}
+
+class LargeItem extends Item {
+  attr float weight;
+}
+
+class SmallItems extends Item {
+  attr int quantity;
+}
+
+class EmptyBox extends Item {
+}
+
+class Warship extends Ship {
+  val EscortShipsOrder escortOrder;
+  val BesiegePortOrder[*] attackOrders;
+}
+
+abstract interface Order {
+}
+
+class EscortShipsOrder extends Order {
+  ref Ship[+] ships;
+}
+
+class BesiegePortOrder extends Order {
+  ref Port[1] port;
+}
+

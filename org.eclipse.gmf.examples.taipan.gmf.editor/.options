@@ -1,0 +1,7 @@
+# Tracing options for the org.eclipse.gmf.examples.taipan.gmf.editor plug-in
+
+# Common issues
+org.eclipse.gmf.examples.taipan.gmf.editor/debug=false
+
+# Visual IDs
+org.eclipse.gmf.examples.taipan.gmf.editor/debug/visualID=false

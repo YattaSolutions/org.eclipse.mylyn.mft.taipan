@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sketch:SketchDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sketch="http://www.eclipse.org/gmf/2007/sketch" visualID="1000">
+  <nodes shape="org.eclipse.gmf.examples.taipan.figures.PortShape" visualID="2001">
+    <labels name="Port Location" visualID="5001" external="true">
+      <attributes href="taipan.ecore#//Port/location"/>
+    </labels>
+    <type href="taipan.ecore#//Port"/>
+  </nodes>
+  <nodes shape="org.eclipse.gmf.examples.taipan.figures.PileShape" visualID="2002">
+    <compartments name="Ship Small Cargo" visualID="7001">
+      <nodes name="Small Items" visualID="3001">
+        <type href="taipan.ecore#//SmallItems"/>
+        <attributes href="taipan.ecore#//Item/article"/>
+        <attributes href="taipan.ecore#//SmallItems/quantity"/>
+      </nodes>
+    </compartments>
+    <compartments name="Ship Large Cargo" visualID="7002">
+      <nodes name="Large Item" shape="org.eclipse.gmf.examples.taipan.figures.PileShape" visualID="3002">
+        <labels name="Large Item Article" visualID="5002">
+          <attributes href="taipan.ecore#//Item/article"/>
+        </labels>
+        <labels name="Large Item Weight" visualID="5003">
+          <attributes href="taipan.ecore#//LargeItem/weight"/>
+        </labels>
+        <type href="taipan.ecore#//LargeItem"/>
+      </nodes>
+      <nodes name="Empty Box" shape="org.eclipse.gmf.examples.taipan.figures.BoxShape" visualID="3003">
+        <type href="taipan.ecore#//EmptyBox"/>
+      </nodes>
+    </compartments>
+    <labels name="Ship Name" visualID="5004">
+      <attributes href="taipan.ecore#//Ship/name"/>
+    </labels>
+    <type href="taipan.ecore#//Ship"/>
+  </nodes>
+  <nodes shape="org.eclipse.gmf.examples.taipan.figures.PileShape" visualID="2003">
+    <compartments name="Warship Small Cargo" visualID="7003" referencedNodes="//@nodes.1/@compartments.0/@nodes.0"/>
+    <compartments name="Warship Large Cargo" visualID="7004" referencedNodes="//@nodes.1/@compartments.1/@nodes.0 //@nodes.1/@compartments.1/@nodes.1"/>
+    <labels name="Warship Name" visualID="5005">
+      <attributes href="taipan.ecore#//Ship/name"/>
+    </labels>
+    <type href="taipan.ecore#//Warship"/>
+  </nodes>
+  <links name="Ship Destination" shape="org.eclipse.gmf.examples.taipan.figures.DirectedConnection" visualID="4001" source="//@nodes.1" target="//@nodes.0">
+    <labels name="Ship Destination Marker" visualID="6001"/>
+  </links>
+  <links name="Reliable Route" visualID="4002" source="//@nodes.0" target="//@nodes.0">
+    <labels name="Reliable Route Desc" visualID="6002">
+      <attributes href="taipan.ecore#//Route/description"/>
+    </labels>
+    <labels name="Reliable Route Relb" visualID="6003">
+      <attributes href="taipan.ecore#//Route/reliability"/>
+    </labels>
+    <type href="taipan.ecore#//Route"/>
+  </links>
+  <links name="Unreliable Route" shape="org.eclipse.gmf.examples.taipan.figures.DashedConnection" visualID="4003" source="//@nodes.0" target="//@nodes.0">
+    <labels name="Unreliable Route Desc" visualID="6004">
+      <attributes href="taipan.ecore#//Route/description"/>
+    </labels>
+    <labels name="Unreliable Route Relb" visualID="6005">
+      <attributes href="taipan.ecore#//Route/reliability"/>
+    </labels>
+    <type href="taipan.ecore#//Route"/>
+  </links>
+  <links name="Ship Route" shape="org.eclipse.gmf.examples.taipan.figures.DirectedConnection" visualID="4004" source="//@nodes.1" target="//@links.1 //@links.2"/>
+  <links name="Besiege Port Order" shape="org.eclipse.gmf.examples.taipan.figures.ArrowConnection" visualID="4005" source="//@nodes.2" target="//@nodes.0">
+    <type href="taipan.ecore#//BesiegePortOrder"/>
+  </links>
+  <links name="Escort Ships Order" shape="org.eclipse.gmf.examples.taipan.figures.ThickDirectedConnection" visualID="4006" source="//@nodes.2" target="//@nodes.1">
+    <type href="taipan.ecore#//EscortShipsOrder"/>
+  </links>
+  <links name="Port Register" shape="org.eclipse.gmf.examples.taipan.figures.DashedConnection" visualID="4007" source="//@nodes.0" target="//@nodes.1"/>
+  <type href="taipan.ecore#//Aquatory"/>
+</sketch:SketchDiagram>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg
+		version="1.0"
+		xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+		contentScriptType="text/ecmascript"
+		contentStyleType="text/css"
+		width="50"
+		height="50"
+		zoomAndPan="magnify">
+    <rect x="0" y="0" width="49" height="49" stroke="#000000" fill="#663300"/>
+    <line fill="none" x1="0" x2="49" y1="10" y2="10" stroke="#000000"/>
+    <line fill="none" x1="0" x2="49" y1="40" y2="40" stroke="#000000"/>
+    <line fill="none" x1="10" x2="10" y1="10" y2="40" stroke="#000000"/>
+    <line fill="none" x1="20" x2="20" y1="10" y2="40" stroke="#000000"/>
+    <line fill="none" x1="30" x2="30" y1="10" y2="40" stroke="#000000"/>
+    <line fill="none" x1="40" x2="40" y1="10" y2="40" stroke="#000000"/>
+</svg>

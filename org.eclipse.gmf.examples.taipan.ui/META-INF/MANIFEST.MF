@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.gmf.examples.taipan.ui;singleton=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.draw2d,
+ org.eclipse.gef,
+ org.eclipse.gmf.runtime.draw2d.ui,
+ org.eclipse.gmf.runtime.diagram.ui,
+ org.eclipse.gmf.examples.taipan
+Provide-Package: org.eclipse.gmf.examples.taipan.figures,
+ org.eclipse.gmf.examples.taipan.layouts
